@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasi Igut | Official Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fdfaf7; color: #1a1a1a; scroll-behavior: smooth; }
+        .font-brush { font-family: 'Permanent Marker', cursive; }
+        .hero-gradient { background: radial-gradient(circle at top right, #fff5f0 0%, #fdfaf7 100%); }
+        .menu-card:hover { transform: translateY(-10px); }
+        
+        @layer utilities {
+            .animate-float {
+                animation: float 3s ease-in-out infinite;
+            }
+            @keyframes float {
+                0%, 100% { transform: translateY(0px) rotate(-6deg); }
+                50% { transform: translateY(-10px) rotate(-3deg); }
+            }
+            .cursor-blink::after {
+                content: '|';
+                @apply animate-pulse text-[#d93a15] font-light;
+            }
+        }
+    </style>
+</head>
+
+<body class="hero-gradient">
+
+    <nav class="flex items-center justify-between px-6 md:px-20 py-6 sticky top-0 bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="flex items-center gap-2">
+            <div class="bg-[#d93a15] w-10 h-10 rounded-full flex items-center justify-center text-white font-bold italic">D-E</div>
+            <span class="font-black text-2xl tracking-tighter uppercase">Dapur <span class="text-[#d93a15]">Een</span></span>
+        </div>
+        <div class="hidden md:flex gap-10 text-sm font-bold uppercase tracking-widest text-gray-600">
+            <a href="#" class="text-[#d93a15]">Beranda</a>
+            <a href="#menu" class="hover:text-[#d93a15] transition">Menu</a>
+            <a href="#testimoni" class="hover:text-[#d93a15] transition">Testimoni</a>
+            <a href="#lokasi" class="hover:text-[#d93a15] transition">Lokasi</a>
+        </div>
+        <a href="https://wa.me/6281545515388" class="bg-[#d93a15] text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg hover:scale-105 transition">WA Sekarang</a>
+    </nav>
+
+    <section class="max-w-7xl mx-auto px-6 md:px-20 py-12 flex flex-col md:flex-row items-center relative min-h-[80vh]">
+        <div class="md:w-1/2 space-y-8 text-center md:text-left z-10">
+            <div class="inline-block bg-orange-100 px-4 py-1.5 rounded-lg border-l-4 border-[#d93a15]">
+                <span class="text-[#d93a15] font-black italic text-sm">🔥 ENAK, MURAH, BIKIN NAGIH!</span>
+            </div>
+            <h1 class="text-7xl md:text-[130px] font-black leading-[0.85] tracking-tighter uppercase">
+                NASI <br> <span id="typewriter" class="text-[#d93a15] cursor-blink"></span>
+            </h1>
+            <p class="text-gray-500 text-lg md:text-xl font-medium max-w-md leading-relaxed">
+                "Gak pelit bumbu, gak pelit porsi! Pilih topping favoritmu dan temukan kenikmatan hakiki dalam setiap suapan Nasi Igut yang melimpah. Sekali coba, dijamin auto-nagih!"
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+                <a href="#menu" class="bg-[#d93a15] text-white px-10 py-4 rounded-2xl font-black text-lg shadow-2xl shadow-red-600/30 hover:bg-red-700 transition-all text-center">Pesan Sekarang</a>
+                <a href="#menu" class="bg-white border-2 border-gray-200 px-10 py-4 rounded-2xl font-black text-lg hover:bg-gray-50 transition-all text-center">Lihat Menu</a>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 mt-16 md:mt-0 relative flex justify-end">
+            <div class="absolute inset-0 bg-white/40 border-[12px] border-white rounded-[60px] animate-float z-0 scale-95 shadow-xl"></div>
+            <div class="absolute inset-0 border-2 border-[#d93a15]/20 rounded-[60px] rotate-6 z-0 scale-105"></div>
+            <div class="absolute -top-10 left-10 bg-white p-5 rounded-3xl shadow-2xl z-30 transform -rotate-12 border border-orange-50 animate-bounce">
+                <p class="font-brush text-[#d93a15] text-2xl leading-none">ISI MELIMPAH!</p>
+                <p class="font-bold text-gray-800 text-sm text-center tracking-widest mt-1 uppercase">Gak Pelit!</p>
+            </div>
+            <img src="foto1.png" alt="Nasi Igut Hero" 
+                 onclick="this.classList.toggle('scale-110'); this.classList.toggle('-rotate-3');"
+                 class="relative z-10 w-full max-w-[550px] drop-shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500 cursor-pointer active:scale-95">
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 md:px-20 -mt-10 mb-32">
+        <div class="bg-white rounded-[40px] p-10 shadow-xl grid grid-cols-1 md:grid-cols-4 gap-8 border border-orange-50 text-center md:text-left">
+            <div class="flex items-center gap-4 justify-center md:justify-start">
+                <div class="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center text-2xl">🍚</div>
+                <div><h5 class="font-black text-sm">Nasi Pulen</h5><p class="text-[10px] text-gray-400 font-bold uppercase">Hangat Setiap Saat</p></div>
+            </div>
+            <div class="flex items-center gap-4 justify-center md:justify-start md:border-l md:pl-8 border-gray-100">
+                <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center text-2xl">🌶️</div>
+                <div><h5 class="font-black text-sm">Sambal Khas</h5><p class="text-[10px] text-gray-400 font-bold uppercase">Racikan Pedas Nagih</p></div>
+            </div>
+            <div class="flex items-center gap-4 justify-center md:justify-start md:border-l md:pl-8 border-gray-100">
+                <div class="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center text-2xl">🍗</div>
+                <div><h5 class="font-black text-sm">Ayam Suwir</h5><p class="text-[10px] text-gray-400 font-bold uppercase">Bumbu Meresap</p></div>
+            </div>
+            <div class="flex items-center gap-4 justify-center md:justify-start md:border-l md:pl-8 border-gray-100">
+                <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center text-2xl">💰</div>
+                <div><h5 class="font-black text-sm">Harga Sahabat</h5><p class="text-[10px] text-gray-400 font-bold uppercase">Ramah di Kantong</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="max-w-7xl mx-auto px-6 md:px-20 py-10">
+        <div class="text-center md:text-left mb-12">
+            <span class="text-[#d93a15] font-black uppercase text-xs tracking-[0.2em]">Daftar Menu</span>
+            <h2 class="text-5xl font-black mt-2 tracking-tighter">PILIH VARIAN RASA</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <script>
+                const menuData = [
+                    { title: "Ikan Tongkol Suwir", img: "menu2.jpeg", desc: "Ikan tongkol suwir berbumbu khas yang gurih dan nikmat." },
+                    { title: "Ayam Kecap", img: "menu3.jpeg", desc: "Ayam Kecap berbumbu khas yang gurih dan nikmat." },
+                    { title: "Ayam Rendang", img: "menu4.jpeg", desc: "Ayam Rendang berbumbu khas yang gurih dan nikmat." },
+                    { title: "Ayam Rica-Rica", img: "menu5.jpeg", desc: "Ayam Rica-Rica berbumbu khas yang gurih dan nikmat." },
+                    { title: "Ayam Suir Ga Pedas", img: "menu6.jpeg", desc: "Ayam Suir Ga Pedas berbumbu khas yang gurih dan nikmat." },
+                    { title: "Ayam Suir Pedas", img: "menu7.jpeg", desc: "Ayam Suir Pedas berbumbu khas yang gurih dan nikmat." },
+                    { title: "Sosis", img: "menu8.jpeg", desc: "Sosis berbumbu khas yang gurih dan nikmat." },
+                    { title: "Sosis Telur", img: "menu9.jpeg", desc: "Sosis telur berbumbu khas yang gurih dan nikmat." },
+                    { title: "Pentol", img: "menu 10.jpeg", desc: "Pentol berbumbu khas yang gurih dan nikmat." }
+                ];
+
+                document.write(menuData.map(item => `
+                    <div class="bg-white rounded-[45px] p-5 shadow-xl shadow-orange-900/5 border border-gray-50 menu-card transition duration-500">
+                        <div class="relative h-64 rounded-[35px] overflow-hidden mb-6">
+                            <img src="${item.img}" class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4 bg-[#d93a15] text-white text-[10px] font-black px-3 py-1 rounded-full uppercase italic">Best Seller</div>
+                        </div>
+                        <div class="px-2">
+                            <h3 class="text-2xl font-black text-gray-900 leading-none mb-2 uppercase">${item.title}</h3>
+                            <p class="text-gray-400 text-sm italic mb-6">${item.desc}</p>
+                            <div class="bg-gray-50 rounded-2xl p-4 mb-6 space-y-2 border border-gray-100">
+                                <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Porsi Kecil</span>
+                                    <span class="text-xl font-black text-[#d93a15]">Rp 6.000</span>
+                                </div>
+                                <div class="flex justify-between items-center pt-1">
+                                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Porsi Besar</span>
+                                    <span class="text-xl font-black text-[#d93a15]">Rp 8.000</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/6281545515388" class="w-full bg-[#1a1a1a] text-white py-4 rounded-2xl font-black hover:bg-[#d93a15] transition-all flex items-center justify-center gap-2">
+                                <i class="fas fa-shopping-cart text-sm"></i> PESAN VIA WA
+                            </a>
+                        </div>
+                    </div>
+                `).join(''));
+            </script>
+        </div>
+    </section>
+
+    <section id="testimoni" class="max-w-7xl mx-auto px-6 md:px-20 py-24 bg-[#1a1a1a] rounded-[60px] my-20 text-white overflow-hidden">
+        <div class="text-center mb-16">
+            <span class="text-[#d93a15] font-black uppercase text-xs tracking-[0.3em]">Testimoni</span>
+            <h2 class="text-5xl font-black mt-2 tracking-tighter uppercase">Apa Kata 100+ Pelanggan?</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <script>
+                const testimonials = [
+                    { name: "Budi Santoso", role: "Driver Ojol", text: "Porsi melimpah, harga receh. Cocok banget buat ganjel perut pas narik!" },
+                    { name: "Siska Amalia", role: "Mahasiswi", text: "Ayam suir pedasnya nagih parah. Gak pelit bumbu sama sekali!" },
+                    { name: "Andi Pratama", role: "Karyawan Swasta", text: "Menu Ikan Tongkolnya juara. Makan siang jadi makin semangat." },
+                    { name: "Dewi Lestari", role: "Ibu Rumah Tangga", text: "Anak-anak suka banget Ayam Kecapnya. Bumbunya meresap sampai ke dalam." },
+                    { name: "Rian Hidayat", role: "Gamer", text: "Praktis buat temen mabar. Kenyangnya pas, pedasnya nampol!" },
+                    { name: "Lestari Putri", role: "Guru", text: "Sering pesan buat acara rapat di sekolah. Rekan-rekan semua pada suka." },
+                    { name: "Hendra Wijaya", role: "Freelancer", text: "Sambal khasnya beneran beda dari yang lain. Ada rasa otentik yang bikin kangen." },
+                    { name: "Maya Kartika", role: "Pecinta Pedas", text: "Udah coba semua menu, tapi Pentol Pedas tetap di hati. Pedasnya gila!" },
+                    { name: "Fajar Ramadhan", role: "Atlet", text: "Porsi besarnya beneran besar. Puas banget setelah capek latihan." },
+                    { name: "Siti Zubaidah", role: "Pelanggan Setia", text: "Dari awal buka sampe sekarang rasanya gak berubah. Tetap enak dan murah!" }
+                ];
+
+                document.write(testimonials.map((t, i) => `
+                    <div class="bg-white/5 p-8 rounded-[40px] border border-white/10 hover:bg-white/10 transition duration-300 ${i === 1 ? 'border-[#d93a15] bg-white/10' : ''}">
+                        <div class="flex text-[#d93a15] mb-4 gap-1 text-[10px]">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic text-sm leading-relaxed mb-6">"${t.text}"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#d93a15] to-orange-400 flex items-center justify-center font-bold text-xs">
+                                ${t.name.charAt(0)}
+                            </div>
+                            <div>
+                                <h5 class="font-black text-xs uppercase tracking-wider">${t.name}</h5>
+                                <p class="text-[9px] text-gray-500 font-bold uppercase tracking-widest">${t.role}</p>
+                            </div>
+                        </div>
+                    </div>
+                `).join(''));
+            </script>
+        </div>
+    </section>
+
+    <section id="lokasi" class="max-w-7xl mx-auto px-6 md:px-20 py-10 mb-32">
+        <div class="flex flex-col md:flex-row gap-16 items-center">
+            <div class="md:w-1/3 space-y-6">
+                <span class="text-[#d93a15] font-black uppercase text-xs tracking-[0.3em]">Lokasi Kami</span>
+                <h2 class="text-5xl font-black tracking-tighter leading-tight">MAMPIR YUK KE OUTLET!</h2>
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <i class="fas fa-map-marker-alt text-2xl text-[#d93a15]"></i>
+                        <div>
+                            <h5 class="font-black text-sm uppercase">Alamat Utama</h5>
+                            <p class="text-gray-500 text-sm font-medium mt-1 leading-relaxed">Jl. Raya Sukses No. 123, Indonesia (Silakan ganti dengan alamat aslimu)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="far fa-clock text-2xl text-[#d93a15]"></i>
+                        <div>
+                            <h5 class="font-black text-sm uppercase">Jam Buka</h5>
+                            <p class="text-gray-500 text-sm font-medium mt-1">Setiap Senin - Jumat: 06.00 - 10.00 </p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://maps.google.com" target="_blank" class="inline-block bg-[#1a1a1a] text-white px-8 py-4 rounded-2xl font-black text-sm hover:bg-[#d93a15] transition-all">BUKA DI GOOGLE MAPS</a>
+            </div>
+            <div class="md:w-2/3 w-full">
+                <div class="rounded-[50px] overflow-hidden shadow-2xl border-[12px] border-white h-[450px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.5731164!3d-6.9034443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e639825707af%3A0x146193ad24e54854!2sBandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1709456789012!5m2!1sid!2sid" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="catering" class="max-w-7xl mx-auto px-6 md:px-20 py-24 bg-white rounded-[60px] my-20 border border-orange-100 shadow-sm">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3 text-center md:text-left">
+                <span class="text-[#d93a15] font-black uppercase text-xs tracking-[0.3em]">Catering & Pesanan</span>
+                <h2 class="text-4xl md:text-5xl font-black mt-2 tracking-tighter leading-tight uppercase">Menerima <br>Pesanan Besar</h2>
+                <p class="text-gray-500 mt-4 font-medium leading-relaxed">Punya acara spesial? Dapur Een siap melayani kebutuhan konsumsi Anda dengan rasa juara dan harga bersahabat.</p>
+                <div class="mt-8 flex gap-4 justify-center md:justify-start">
+                    <a href="https://wa.me/6281545515388" class="bg-[#d93a15] text-white px-8 py-4 rounded-full font-black text-xs shadow-xl shadow-red-600/20 hover:scale-105 transition-all inline-flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> KONSULTASI MENU
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+                <div class="bg-white p-6 rounded-[35px] shadow-sm hover:shadow-2xl transition-all border border-orange-100 group">
+                    <div class="relative aspect-video rounded-2xl overflow-hidden mb-5">
+                        <img src="nasi1.jpg" alt="Nasi Tumpeng Kuning Lengkap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-black bg-orange-100 text-[#d93a15] px-3 py-1 rounded-full uppercase italic">Acara Syukuran</span>
+                    </div>
+                    <h4 class="font-black text-lg uppercase tracking-tighter mb-2">Nasi Tumpeng</h4>
+                    <p class="text-[11px] text-gray-400 font-bold leading-relaxed uppercase">Hiasan cantik & rasa otentik untuk syukuran atau perayaan.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-[35px] shadow-sm hover:shadow-2xl transition-all border border-orange-100 group">
+                    <div class="relative aspect-video rounded-2xl overflow-hidden mb-5">
+                        <img src="nasi2.jpg" alt="Rice Bowl Ayam Suwir Sambal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-black bg-orange-100 text-[#d93a15] px-3 py-1 rounded-full uppercase italic">Praktis & Enak</span>
+                    </div>
+                    <h4 class="font-black text-lg uppercase tracking-tighter mb-2">Rice Bowl</h4>
+                    <p class="text-[11px] text-gray-400 font-bold leading-relaxed uppercase">Praktis, kekinian, dan isian melimpah. Cocok untuk event kantor.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-[35px] shadow-sm hover:shadow-2xl transition-all border border-orange-100 group">
+                    <div class="relative aspect-video rounded-2xl overflow-hidden mb-5">
+                        <img src="nasi3.jpg" alt="Nasi Kotak Premium Bento Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <span class="absolute bottom-3 left-3 text-[10px] font-black bg-orange-100 text-[#d93a15] px-3 py-1 rounded-full uppercase italic">Sesuai Budget</span>
+                    </div>
+                    <h4 class="font-black text-lg uppercase tracking-tighter mb-2">Nasi Kotak</h4>
+                    <p class="text-[11px] text-gray-400 font-bold leading-relaxed uppercase">Menu lengkap dengan kemasan rapi untuk berbagai acara formal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1a1a1a] text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-2 mb-6">
+                    <div class="bg-[#d93a15] w-10 h-10 rounded-full flex items-center justify-center font-bold italic text-sm">D-E</div>
+                    <span class="font-black text-2xl tracking-tighter uppercase">Dapur Een</span>
+                </div>
+                <p class="text-gray-500 text-sm max-w-xs leading-relaxed font-medium">"Definisi kenyang yang sesungguhnya! Pilih menu sesuka hati, nikmati isian yang gak pelit, dan rasakan sensasi sambal khas kita yang bener-bener bikin candu."</p>
+            </div>
+            <div class="flex gap-10">
+                <div class="text-center md:text-left">
+                    <h5 class="text-[#d93a15] font-black text-[10px] uppercase tracking-[0.3em] mb-4">Navigasi</h5>
+                    <ul class="space-y-2 text-xs font-bold text-gray-400 uppercase tracking-widest">
+                        <li><a href="#" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="#menu" class="hover:text-white transition">Menu</a></li>
+                        <li><a href="#testimoni" class="hover:text-white transition">Testimoni</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-left">
+    <h5 class="text-[#d93a15] font-black text-[10px] uppercase tracking-[0.3em] mb-4">Sosial Media</h5>
+    <div class="flex gap-4 text-xl">
+        <a href="https://www.instagram.com/dapureen_banjarmasin?igsh=MTR5dXJ4ZTdkZmwzOA==" target="_blank" class="hover:text-[#d93a15] transition">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@dapureen.id?_r=1&_t=ZS-95tVKD09BUC" target="_blank" class="hover:text-[#d93a15] transition">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://wa.me/6281545515388" target="_blank" class="hover:text-[#d93a15] transition">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+</div>
+        
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textElement = document.getElementById('typewriter');
+            const word = "IGUT";
+            let index = 0;
+
+            function playTyping() {
+                if (index < word.length) {
+                    textElement.innerHTML += word.charAt(index);
+                    index++;
+                    setTimeout(playTyping, 300); 
+                }
+            }
+            playTyping();
+        });
+    </script>
+
+</body>
+</html>
